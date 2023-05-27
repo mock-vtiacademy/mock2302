@@ -1,0 +1,6 @@
+/.metadata/
+*.class
+backend/target/classes/application.properties
+backend/target/classes/META-INF/MANIFEST.MF
+backend/target/classes/META-INF/maven/com.vti/GroupManagement/pom.properties
+backend/target/classes/META-INF/maven/com.vti/GroupManagement/pom.xml
