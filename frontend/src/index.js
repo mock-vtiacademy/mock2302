@@ -9,3 +9,5 @@ import App from "./App";
 ReactDOM.render(<App />, document.getElementById("root"));
 
 //Add Function 1
+
+//Add function 2
