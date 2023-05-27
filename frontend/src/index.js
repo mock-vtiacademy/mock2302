@@ -11,3 +11,5 @@ ReactDOM.render(<App />, document.getElementById("root"));
 //Add Function 1
 
 //Add function 2
+
+//Add function 3
