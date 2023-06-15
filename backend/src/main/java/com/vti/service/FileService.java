@@ -3,6 +3,7 @@ package com.vti.service;
 import java.io.IOException;
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,7 +13,9 @@ import com.vti.utils.FileManager;
 public class FileService implements IFileService {
 
 	private FileManager fileManager = new FileManager();
-	private String linkFolder = "C:\\Users\\pc\\Desktop\\Avatar";
+	
+	@Value("${myapp.image-folder}")
+	private String linkFolder;
 
 	@Override
 	public String uploadImage(MultipartFile image) throws IOException {

@@ -34,4 +34,19 @@ public class FileController {
 		
 		return new ResponseEntity<>(fileService.uploadImage(image), HttpStatus.OK);
 	}
+	
+	@PostMapping(value = "/product")
+	public ResponseEntity<?> upLoadProduct(@RequestParam(name = "image") MultipartFile image, 
+			@RequestParam(name = "name") String name) throws IOException {
+
+		if (!new FileManager().isTypeFileImage(image)) {
+			return new ResponseEntity<>("File must be image!", HttpStatus.UNPROCESSABLE_ENTITY);
+		}
+		
+		String imageLink = fileService.uploadImage(image);
+		
+		System.out.println("Name " + name + "Image Link " + imageLink);
+		
+		return new ResponseEntity<>(imageLink, HttpStatus.OK);				
+	}
 }

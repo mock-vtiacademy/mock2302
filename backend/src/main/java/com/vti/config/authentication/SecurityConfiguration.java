@@ -56,7 +56,13 @@ public class SecurityConfiguration {
 							.requestMatchers("/api/v1/login").permitAll()
 							.requestMatchers("/api/v1/users/profile").authenticated()
 							.requestMatchers("/api/v1/users/**").permitAll()
+							
+							//APIs --------------------------------------------							
+							
+							
+							///////////////////////////////////////////////////
 							.anyRequest().authenticated()
+							//.anyRequest().permitAll()
 							.and()
 							.httpBasic()
 							.and()
