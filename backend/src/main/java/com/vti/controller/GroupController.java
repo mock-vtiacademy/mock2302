@@ -23,8 +23,11 @@ import com.vti.dto.filter.GroupFilter;
 import com.vti.entity.Group;
 import com.vti.service.IGroupService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping(value = "api/v1/groups")
+@Slf4j
 public class GroupController {
 
 	@Autowired
@@ -37,6 +40,7 @@ public class GroupController {
 			@RequestParam(required = false) 
 			String search) {
 		Page<Group> entities = service.getAllGroups(pageable, filter, search);
+		
 		return new ResponseEntity<>(entities, HttpStatus.OK);
 	}
 

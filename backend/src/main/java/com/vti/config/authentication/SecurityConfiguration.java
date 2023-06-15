@@ -61,8 +61,8 @@ public class SecurityConfiguration {
 							
 							
 							///////////////////////////////////////////////////
-							.anyRequest().authenticated()
-							//.anyRequest().permitAll()
+							//.anyRequest().authenticated()
+							.anyRequest().permitAll()
 							.and()
 							.httpBasic()
 							.and()
